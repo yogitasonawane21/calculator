@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
 <style>
+   @font-face {
+    font-family: 'DS-Digital Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DS-Digital Normal'), url('DS-DIGI.woff') format('woff');
+    }
 .calculator-body{
     height:300px;
     width: 250px;
-    background-color: #3D3D5C;
+    background-color:black;
     margin: 20px auto;
     border-radius: 10px;
     padding: 20px;
@@ -24,6 +28,7 @@
     font-size: 25px;
     padding: 5px 10px;
     margin-bottom: 20px;
+    font-family: "DS-Digital Normal";
 }
 .button-container{
     display: flex;
@@ -47,38 +52,54 @@
 box-shadow: 0 0 5px 0 white;
 transition: 0.5s;
 }
-.btn-equals{
-    background-color: orangered;
-    height: 70px;
-    color: white;
+.btn-operator{
+    background-color:orange;
+     width:50px;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 20px;
+    margin: 3px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;  
 }
-    .btn-AC{
-        background-color: orangered;
-    }
+.btn-eql{
+    background-color:rosybrown;
+    width:50px;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 20px;
+    margin: 3px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+
 </style>
 <body>
     <div class="calculator-body">
         <input type="text" value="0" class="screen"/>
         <div class="button-container">
-            <button class="btn btn-AC">AC</button>
+            <button class="btn-operator">AC</button>
             <button class="btn">7</button>
             <button class="btn">4</button>
             <button class="btn">1</button>
-            <button class="btn">0</button>
-            <button class="btn">M+</button>
+            <button class="btn">+/-</button>
+            <button class="btn-operator">()</button>
             <button class="btn">8</button>
-            <button class="btn">2</button>
             <button class="btn">5</button>
-            <button class="btn">.</button>
-            <button class="btn">/</button>
+            <button class="btn">2</button>
+            <button class="btn">0</button>
+            <button class="btn-operator">%</button>
             <button class="btn">9</button>
             <button class="btn">6</button>
             <button class="btn">3</button>
-            <button class="btn">%</button>
+            <button class="btn">.</button>
+            <button class="btn-operator">/</button>
             <button class="btn">X</button>
             <button class="btn">-</button>
             <button class="btn">+</button>
-            <button class="btn btn-equals">=</button>
+            <button class="btn-eql">=</button>
         </div>
     </div> 
 </body>
